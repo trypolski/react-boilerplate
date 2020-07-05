@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Roboto:400,400i,500,500i,700&display=swap&subset=cyrillic');
+@import './grid.scss';
+
+$font-sans: 'Open Sans', sans-serif;
+$font-roboto: Roboto, sans-serif;
+$font-extralarge: 32px;
+$color-text: #212121;
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: $font-roboto;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  display: flex;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-sans;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1 {
+  font-size: $font-extralarge;
+  padding: 20px 0;
+  color: $color-text;
+
+  &::hover {
+    color: black;
+  }
+}

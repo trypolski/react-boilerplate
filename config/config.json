@@ -1,0 +1,14 @@
+{
+  "development": {
+    "mode": "development",
+    "port": "3080",
+    "baseUrl": "http://localhost:3080",
+    "apiUrl": "http://localhost:3003/api"
+  },
+  "production": {
+    "mode": "production",
+    "port": "3080",
+    "baseUrl": "",
+    "apiUrl": ""
+  }
+}

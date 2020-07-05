@@ -39,12 +39,19 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react']
+            presets: [
+              "@babel/preset-env",
+              '@babel/preset-react'
+            ],
+            plugins: [
+              "@babel/plugin-proposal-class-properties",
+              "@babel/plugin-transform-runtime"
+            ]
           }
         }
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(s[ac]ss|css)$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
@@ -52,13 +59,32 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: '[hash]-[name].[ext]',
           publicPath: '../assets',
           outputPath: 'assets'
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              name: '[hash]-[name].[ext]',
+              outputPath: 'assets'
+            }
+          },
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash]-[name].[ext]',
+              outputPath: 'assets'
+            }
+          }
+        ]
       }
     ]
   }

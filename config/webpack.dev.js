@@ -15,7 +15,9 @@ module.exports = merge(common, {
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new webpack.DefinePlugin({
-      __API_URL__: JSON.stringify(config.development.apiUrl)
+      __API_URL__: JSON.stringify(config.development.apiUrl),
+      __BACKEND_URL__: JSON.stringify(config.development.baseUrl),
+      __DEVELOPMENT_MODE__: true
     })
   ],
   devServer: {

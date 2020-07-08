@@ -14,7 +14,9 @@ module.exports = merge(common, {
     }),
     new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
-      __API_URL__: JSON.stringify(config.production.apiUrl)
+      __API_URL__: JSON.stringify(config.production.apiUrl),
+      __BACKEND_URL__: JSON.stringify(config.production.baseUrl),
+      __DEVELOPMENT_MODE__: false
     })
   ]
 })

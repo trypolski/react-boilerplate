@@ -87,5 +87,11 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      layout: path.resolve(__dirname, '../src/layout/'),
+      packages: path.resolve(__dirname, '../src/packages/')
+    }
   }
 }

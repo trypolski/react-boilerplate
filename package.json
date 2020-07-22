@@ -17,7 +17,7 @@
     "sass"
   ],
   "author": "Oleksandr Trypolskyi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/trypolski/react-bolierplate/issues"
   },
